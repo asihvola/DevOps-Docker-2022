@@ -1,0 +1,22 @@
+Exercise 1.3: Secret message
+
+ari@Nauris:~$ docker ps -a
+CONTAINER ID   IMAGE                                      COMMAND                  CREATED          STATUS                      PORTS     NAMES
+a590f1cd72d6   devopsdockeruh/simple-web-service:ubuntu   "/usr/src/app/server"    5 minutes ago    Up 5 minutes                          focused_chatelet
+d2170fe12900   devopsdockeruh/simple-web-service:ubuntu   "/usr/src/app/server"    5 minutes ago    Up 5 minutes                          dreamy_ganguly
+b286f6e0062e   devopsdockeruh/simple-web-service:ubuntu   "/usr/src/app/server"    5 minutes ago    Exited (2) 5 minutes ago              hopeful_chaum
+9a0a96a2abeb   devopsdockeruh/simple-web-service          "/usr/src/app/server"    5 minutes ago    Exited (2) 5 minutes ago              boring_cannon
+6478ccbe396a   devopsdockeruh/simple-web-service:ubuntu   "/usr/src/app/server…"   10 minutes ago   Exited (0) 10 minutes ago             recursing_kowalevski
+d452ca5044f1   devopsdockeruh/simple-web-service:ubuntu   "/usr/src/app/server"    13 minutes ago   Exited (2) 13 minutes ago             objective_panini
+13519f93943f   devopsdockeruh/simple-web-service:ubuntu   "/usr/src/app/server"    15 minutes ago   Exited (2) 14 minutes ago             boring_tereshkova
+8b36ee7f1048   devopsdockeruh/simple-web-service:ubuntu   "/usr/src/app/server"    16 minutes ago   Exited (2) 5 minutes ago              dreamy_tharp
+ari@Nauris:~$ 
+
+
+
+ari@Nauris:~$ docker exec -it focused_chatelet bash
+root@a590f1cd72d6:/usr/src/app# tail -f ./text.log
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2022-02-15 19:45:45 +0000 UTC
+2022-02-15 19:45:47 +0000 UTC
+2022-02-15 19:45:49 +0000 UTC
