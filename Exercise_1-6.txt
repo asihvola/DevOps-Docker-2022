@@ -1,0 +1,26 @@
+Harjoitus 1.6
+
+ari@ari-VirtualBox:~/Docker2022$ docker container list
+CONTAINER ID   IMAGE                          COMMAND           CREATED          STATUS          PORTS     NAMES
+739b0e36c1b6   devopsdockeruh/pull_exercise   "node index.js"   11 seconds ago   Up 11 seconds             sleepy_proskuriakova
+
+ari@ari-VirtualBox:~/Docker2022$ docker exec -it 739b0e36c1b6 sh
+/usr/app # ls
+Dockerfile  README.md   index.js
+/usr/app # cat Dockerfile 
+FROM node:alpine
+
+WORKDIR /usr/app
+COPY . .
+
+CMD ["node", "index.js"]
+/usr/app # cat README.md 
+This is the readme, use input "basics" to complete this exercise.
+/usr/app # ari@ari-VirtualBox:~/Docker2022$ 
+
+ari@ari-VirtualBox:~/Docker2022$ docker run -it devopsdockeruh/pull_exercise
+Give me the password: basics
+You found the correct password. Secret message is:
+"This is the secret message"
+
+ari@ari-VirtualBox:~/Docker2022$ 
