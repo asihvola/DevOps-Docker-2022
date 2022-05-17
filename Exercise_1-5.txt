@@ -1,0 +1,25 @@
+Exercise 1.5: Sizes of images
+
+devopsdockeruh/simple-web-service   ubuntu    4e3362e907d5   12 months ago   83MB
+devopsdockeruh/simple-web-service   alpine    fd312adc88e0   12 months ago   15.7MB
+
+
+ari@ari-VirtualBox:~/Docker2022$ docker container list
+CONTAINER ID   IMAGE                                      COMMAND                 CREATED              STATUS              PORTS     NAMES
+6e7c9696798a   devopsdockeruh/simple-web-service:alpine   "/usr/src/app/server"   44 seconds ago       Up 43 seconds                 awesome_driscoll
+da092d79206b   devopsdockeruh/simple-web-service:alpine   "/usr/src/app/server"   55 seconds ago       Up 54 seconds                 fervent_leakey
+5016f997fbdf   fd312adc88e0                               "/usr/src/app/server"   About a minute ago   Up About a minute             tender_lehmann
+c36db412fe12   devopsdockeruh/simple-web-service:alpine   "/usr/src/app/server"   16 minutes ago       Up 16 minutes                 tender_robinson
+
+ari@ari-VirtualBox:~/Docker2022$ docker exec -it awesome_driscoll sh
+/usr/src/app # ls
+server    text.log
+/usr/src/app # cat text.log 
+2022-05-12 09:01:33 +0000 UTC
+2022-05-12 09:01:35 +0000 UTC
+2022-05-12 09:01:37 +0000 UTC
+2022-05-12 09:01:39 +0000 UTC
+2022-05-12 09:01:41 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2022-05-12 09:01:43 +0000 UTC
+2022-05-12 09:01:45 +0000 UTC
