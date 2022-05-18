@@ -1,0 +1,7 @@
+Exercise 1.8: Image for script
+
+Building Docker:
+docker build . -t curler
+
+Run Docker:
+docker run -it curler
