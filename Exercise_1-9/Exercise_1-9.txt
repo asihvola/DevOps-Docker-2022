@@ -1,0 +1,9 @@
+Creating file where to store logs:
+touch text.log
+
+Run devopsdockeruh/simple-web-service with parameter to get sercet message:
+docker run -v $(pwd)/text.log:/usr/src/app/text.log devopsdockeruh/simple-web-service
+
+Check log file to see secret message:
+cat text.log 
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
